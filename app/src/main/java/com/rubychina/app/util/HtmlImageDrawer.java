@@ -79,8 +79,8 @@ public class HtmlImageDrawer implements Html.ImageGetter {
                 int width = bitmap.getWidth();
                 int height = bitmap.getHeight();
                 if(width == height && width == 64) {
-                    width = 32;
-                    height = 32;
+                    width = 36;
+                    height = 36;
                 }
                 mDrawable.setBounds(0, 0, width, height);
                 mDrawable.setLevel(1);
