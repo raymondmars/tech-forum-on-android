@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by raymond on 5/14/14.
+ * Created by robot on 5/14/14.
  */
 public class Reply implements Parcelable {
     private int id;

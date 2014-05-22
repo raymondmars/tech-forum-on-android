@@ -12,7 +12,7 @@ import com.rubychina.app.entities.Reply;
 import java.util.ArrayList;
 
 /**
- * Created by raymond on 5/19/14.
+ * Created by robot on 5/19/14.
  */
 public abstract class CommonListAdapter<T> extends BaseAdapter {
 

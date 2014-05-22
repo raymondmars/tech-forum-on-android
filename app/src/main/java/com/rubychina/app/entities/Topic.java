@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by raymond on 5/12/14.
+ * Created by robot on 5/12/14.
  */
 public class Topic implements Parcelable {
 

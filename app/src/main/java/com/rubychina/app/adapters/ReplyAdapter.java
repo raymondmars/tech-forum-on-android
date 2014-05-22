@@ -18,7 +18,7 @@ import com.rubychina.app.util.UIHelper;
 import java.util.ArrayList;
 
 /**
- * Created by raymond on 5/16/14.
+ * Created by robot on 5/16/14.
  */
 public class ReplyAdapter extends CommonListAdapter<Reply> {
 

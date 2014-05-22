@@ -14,7 +14,7 @@ import com.rubychina.app.util.TopApp;
 import org.json.JSONObject;
 
 /**
- * Created by raymond on 5/10/14.
+ * Created by robot on 5/10/14.
  */
 public class ApiWrapperTest extends InstrumentationTestCase {
 

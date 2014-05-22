@@ -17,7 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created by raymond on 5/16/14.
+ * Created by robot on 5/16/14.
  */
 public class UIHelper {
     public static String timesAgo(String last_date_str) {

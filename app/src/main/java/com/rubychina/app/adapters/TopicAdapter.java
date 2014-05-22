@@ -14,7 +14,7 @@ import com.rubychina.app.util.UIHelper;
 import java.util.ArrayList;
 
 /**
- * Created by raymond on 5/12/14.
+ * Created by robot on 5/12/14.
  */
 public class TopicAdapter extends CommonListAdapter<Topic> {
 

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 /**
- * Created by raymond on 5/19/14.
+ * Created by robot on 5/19/14.
  */
 public class ExpandableHeightListView extends ListView {
 

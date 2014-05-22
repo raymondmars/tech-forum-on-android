@@ -21,7 +21,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * Created by raymond on 5/16/14.
+ * Created by robot on 5/16/14.
  */
 public class HtmlImageDrawer implements Html.ImageGetter {
 

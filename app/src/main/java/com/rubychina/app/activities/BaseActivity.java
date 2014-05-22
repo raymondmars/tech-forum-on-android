@@ -14,7 +14,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by raymond on 5/6/14.
+ * Created by robot on 5/6/14.
  */
 public class BaseActivity extends ActionBarActivity {
 
