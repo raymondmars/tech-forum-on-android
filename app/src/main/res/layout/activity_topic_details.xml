@@ -92,9 +92,10 @@
         </FrameLayout>
 
         <com.rubychina.app.exlibs.ExpandableHeightListView
-            android:layout_height ="wrap_content"
+            android:layout_height ="0dp"
             android:layout_width="fill_parent"
             android:id="@+id/listview_replies"
+            android:layout_weight="1"
             android:background="#ffffff"
             />
 

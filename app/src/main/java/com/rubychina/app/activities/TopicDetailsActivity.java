@@ -111,7 +111,6 @@ public class TopicDetailsActivity extends BaseActivity  {
         //ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) view.getLayoutParams();
         //lp.height = 100*topic.getReplies_count();
         //view.setLayoutParams(lp);
-        view.setExpanded(true);
 
         ReplyAdapter adapter = new ReplyAdapter(this, (ArrayList<Reply>)topic.getReplies());
         view.setAdapter(adapter);

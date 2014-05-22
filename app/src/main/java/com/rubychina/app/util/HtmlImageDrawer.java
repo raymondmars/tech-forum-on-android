@@ -38,7 +38,6 @@ public class HtmlImageDrawer implements Html.ImageGetter {
     public Drawable getDrawable(String source) {
         LevelListDrawable d = new LevelListDrawable();
         Drawable empty = this.default_load_image;
-        //Drawable empty = getResources().getDrawable(R.drawable.ic_image_loading);
         d.addLevel(0, 0, empty);
         d.setBounds(0, 0, empty.getIntrinsicWidth(), empty.getIntrinsicHeight());
         new LoadImage().execute(source, d);
@@ -55,7 +54,7 @@ public class HtmlImageDrawer implements Html.ImageGetter {
         protected Bitmap doInBackground(Object... params) {
             String source = (String) params[0];
             mDrawable = (LevelListDrawable) params[1];
-            Log.d(TAG, "doInBackground " + source);
+//            Log.d(TAG, "doInBackground " + source);
             try {
                 InputStream is = new URL(source).openStream();
                 return BitmapFactory.decodeStream(is);
@@ -71,14 +70,20 @@ public class HtmlImageDrawer implements Html.ImageGetter {
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
-            Log.d(TAG, "onPostExecute drawable " + mDrawable);
-            Log.d(TAG, "onPostExecute bitmap " + bitmap);
+//            Log.d(TAG, "onPostExecute drawable " + mDrawable);
+//            Log.d(TAG, "onPostExecute bitmap " + bitmap);
             if (bitmap != null) {
                 BitmapDrawable d = new BitmapDrawable(bitmap);
                 mDrawable.addLevel(1, 1, d);
-                mDrawable.setBounds(0, 0, bitmap.getWidth(), bitmap.getHeight());
+                //process emoji image
+                int width = bitmap.getWidth();
+                int height = bitmap.getHeight();
+                if(width == height && width == 64) {
+                    width = 32;
+                    height = 32;
+                }
+                mDrawable.setBounds(0, 0, width, height);
                 mDrawable.setLevel(1);
-                //TextView topic_content_view = get_target_view();
                 CharSequence t = targetTextView.getText();
                 targetTextView.setText(t);
 
