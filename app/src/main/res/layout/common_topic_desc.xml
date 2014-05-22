@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dip" >
+
+    <TextView
+        android:id="@+id/txt_nodename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#778088"
+        android:textSize="11dip"
+        android:text="Rails"
+        android:background="@drawable/node_bg"
+        android:layout_alignBottom="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail" />
+    <TextView
+        android:id="@+id/textView_point1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#D0D2DC"
+        android:textSize="11dip"
+        android:text="•"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/txt_nodename"
+        android:layout_toRightOf="@+id/txt_nodename" />
+    <TextView
+        android:id="@+id/txt_topic_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#778088"
+        android:textSize="11dip"
+        android:text="User1"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/textView_point1"
+        android:layout_toRightOf="@+id/textView_point1" />
+    <TextView
+        android:id="@+id/textView_point2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#D0D2DC"
+        android:textSize="11dip"
+        android:text="•"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/txt_topic_user"
+        android:layout_toRightOf="@+id/txt_topic_user" />
+    <TextView
+        android:id="@+id/textView_t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#D0D2DC"
+        android:textSize="11dip"
+        android:text="最后由"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/textView_point2"
+        android:layout_toRightOf="@+id/textView_point2" />
+    <TextView
+        android:id="@+id/txt_last_reply_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#778088"
+        android:textSize="11dip"
+        android:text="User2"
+        android:layout_marginLeft="3dp"
+        android:layout_alignTop="@+id/textView_t1"
+        android:layout_toRightOf="@+id/textView_t1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textColor="#D0D2DC"
+        android:textSize="11dip"
+        android:id="@+id/txt_reply_time"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/txt_last_reply_user"/>
+
+</RelativeLayout>

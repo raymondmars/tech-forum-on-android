@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="0dp"
+                android:paddingTop="8dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="#ffffff">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/reply_user_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_user_default"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/reply_user_image"
+            android:layout_marginLeft="8dp">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_reply_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#888888"
+                    android:textSize="11dp"
+                    android:text="User1"/>
+                <TextView
+                    android:id="@+id/txt_reply_floor_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#D6D6D2"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="1楼"
+                    android:layout_toRightOf="@+id/txt_reply_user"/>
+                <TextView
+                    android:id="@+id/textView_reply_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#D0D2DC"
+                    android:textSize="11dp"
+                    android:text="•"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/txt_reply_floor_count" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:textColor="#D0D2DC"
+                    android:textSize="11dp"
+                    android:id="@+id/txt_reply_list_time"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/textView_reply_point"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/txt_reply_content"
+                android:text="Reply Content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+</RelativeLayout>

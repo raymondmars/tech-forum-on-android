@@ -1,0 +1,48 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        debug {
+            //storeFile file("")
+        }
+
+        release {
+            storeFile file("ruby_android_key.jks")
+            storePassword "Start@123"
+            keyAlias "ruby_android"
+            keyPassword "Start@123"
+
+        }
+    }
+    buildTypes {
+        release {
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                def file = variant.outputFile
+                //variant.outputFile = new File(file.parent, file.name.replace(".apk", "-" + defaultConfig.versionName + ".apk"))
+                variant.outputFile = new File(file.parent, "ruby_china_release_" + defaultConfig.versionName + ".apk")
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.android.support:support-v4:19.+'
+}
+//./gradlew clean && ./gradlew build
