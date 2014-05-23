@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import com.rubychina.app.entities.Reply;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by robot on 5/19/14.
@@ -29,6 +30,7 @@ public abstract class CommonListAdapter<T> extends BaseAdapter {
     public int getCount() {
         return data.size();
     }
+
     public Object getItem(int position) {
         return data.get(position);
     }
@@ -36,4 +38,15 @@ public abstract class CommonListAdapter<T> extends BaseAdapter {
     public abstract long getItemId(int position) ;
 
     public abstract View getView(int position, View convertView, ViewGroup parent);
+
+    public void reload(List<T> list) {
+        if(list != null && list.size() > 0) {
+            data.clear();
+            for(int i=0;i<list.size();i++){
+                data.add(list.get(i));
+            }
+            this.notifyDataSetChanged();
+        }
+
+    }
 }
