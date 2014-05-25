@@ -18,10 +18,10 @@ public class TopicService {
     public static final String Topic_List_Key = "Topic_List_key";
 
     public static String getTopicApi(int id) {
-        return "http://ruby-china.org/api/topics/" + String.valueOf(id) + ".json";
+        return "https://ruby-china.org/api/topics/" + String.valueOf(id) + ".json";
     }
     public static String getTopicListApi() {
-        return "http://ruby-china.org/api/topics.json";
+        return "https://ruby-china.org/api/topics.json";
     }
 
 

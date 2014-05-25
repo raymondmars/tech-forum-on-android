@@ -37,7 +37,7 @@ public class User implements Parcelable {
     }
 
     public String getAvatar_url() {
-        if(avatar_url.indexOf("http:") < 0) {
+        if(avatar_url.indexOf("https:") < 0) {
             avatar_url = "http:" + avatar_url;
         }
         return avatar_url;
