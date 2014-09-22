@@ -18,8 +18,8 @@
         >
         <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/list_image"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/ic_user_default"/>
 
         <LinearLayout android:orientation="vertical"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="Topic Title"
                 android:textColor="#0465E1"
-                android:textSize="13dip"
+                android:textSize="11dip"
                 android:layout_weight="1"
                 />
 
@@ -45,6 +45,7 @@
                      android:layout_width="fill_parent"
                      android:layout_height="wrap_content"
                      android:layout_weight="1"
+
                 android:layout_marginTop="8dp"/>
             <!--<fragment-->
                 <!--android:id="@+id/fag_topic_info"-->
@@ -60,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="39"
-            android:textSize="11dip"
+            android:textSize="10dip"
             android:textColor="#ffffff"
             android:background="@drawable/reply_bg"
             android:layout_gravity="right|center_vertical"

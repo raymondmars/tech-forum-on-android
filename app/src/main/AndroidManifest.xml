@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rubychina.app.activities" >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="com.rubychina.app.util.TopApp"
         android:allowBackup="true"
@@ -12,18 +13,22 @@
         <activity
             android:name="com.rubychina.app.activities.SplashScreenActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name="com.rubychina.app.activities.MainActivity" >
         </activity>
         <activity
-            android:name=".TopicDetailsActivity"
+            android:name="com.rubychina.app.activities.TopicDetailsActivity"
             android:label="@string/title_activity_topic_details" >
+        </activity>
+        <activity
+            android:name="com.rubychina.app.activities.NavActivity"
+            android:label="@string/title_activity_nav" >
         </activity>
     </application>
 

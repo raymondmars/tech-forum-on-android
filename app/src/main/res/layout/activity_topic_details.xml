@@ -36,7 +36,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textSize="16dp"
+                    android:textSize="13dp"
                     android:textStyle="bold"
                     android:text="Topic Title"
                     android:id="@+id/txt_detail_title"
@@ -49,8 +49,8 @@
 
 
             <com.android.volley.toolbox.NetworkImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:id="@+id/img_detail_user_logo"
                 android:src="@drawable/ic_user_default"
                 android:layout_gravity="right|top" />
@@ -64,7 +64,7 @@
             android:id="@+id/txt_topic_content"
             android:background="#ffffff"
             android:padding="6dp"
-            android:textSize="15dp"
+            android:textSize="12dp"
             android:gravity="fill_vertical"
             android:layout_row="1"
             android:layout_column="0"/>
@@ -87,7 +87,7 @@
                 android:id="@+id/txt_reply_count_display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
+                android:textSize="11dp"
                 android:text="共收到N条回复"/>
         </FrameLayout>
 

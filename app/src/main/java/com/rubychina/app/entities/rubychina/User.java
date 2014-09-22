@@ -1,21 +1,19 @@
-package com.rubychina.app.entities;
+package com.rubychina.app.entities.rubychina;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.rubychina.app.entities.IUser;
+
 /**
  * Created by robot on 5/12/14.
  */
-public class User implements Parcelable {
+public class User implements IUser {
     private int id;
     private String login;
     private String avatar_url;
 
-//    public User(int id, String login, String avatar_url) {
-//        this.id = id;
-//        this.login = login;
-//        this.avatar_url = avatar_url;
-//    }
+    public User() {}
     public User(Parcel in) {
         readFromParcel(in);
     }
@@ -45,6 +43,16 @@ public class User implements Parcelable {
 
     public void setAvatar_url(String avatar_url) {
         this.avatar_url = avatar_url;
+    }
+
+    @Override
+    public String getUsername() {
+        return login;
+    }
+
+    @Override
+    public String getAvatarImage() {
+        return avatar_url;
     }
 
     @Override

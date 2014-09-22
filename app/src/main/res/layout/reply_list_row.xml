@@ -10,8 +10,8 @@
 
         <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/reply_user_image"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/ic_user_default"/>
 
         <LinearLayout
@@ -64,7 +64,7 @@
                 android:id="@+id/txt_reply_content"
                 android:text="Reply Content"
                 android:layout_marginTop="5dp"
-                android:textSize="14dp"
+                android:textSize="12dp"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>

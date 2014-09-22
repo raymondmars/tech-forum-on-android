@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.rubychina.app.activities.R;
-import com.rubychina.app.entities.Topic;
+import com.rubychina.app.entities.ITopic;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -52,11 +52,17 @@ public class UIHelper {
 
     }
 
-    public static void renderTopicInfo(View vi,Topic tp) {
-        ((TextView)vi.findViewById(R.id.txt_nodename)).setText(tp.getNode_name());
-        ((TextView)vi.findViewById(R.id.txt_topic_user)).setText(underLine(tp.getUser().getLogin()));
-        ((TextView)vi.findViewById(R.id.txt_last_reply_user)).setText(underLine(tp.getLast_reply_user_login()));
-        ((TextView)vi.findViewById(R.id.txt_reply_time)).setText(timesAgo(tp.getReplied_at()));
+    public static void renderTopicInfo(View vi,ITopic tp) {
+        ((TextView)vi.findViewById(R.id.txt_nodename)).setText(tp.getBelongNode().getName());
+        ((TextView)vi.findViewById(R.id.txt_topic_user)).setText(underLine(tp.getCreateUser().getUsername()));
+        ((TextView)vi.findViewById(R.id.txt_last_reply_user)).setText(underLine(tp.getLastReplyUser().getUsername()));
+        ((TextView)vi.findViewById(R.id.txt_reply_time)).setText(timesAgo(tp.getLastReplyTime()));
+    }
+    public static void renderV2exTopicInfo(View vi, com.rubychina.app.entities.v2ex.Topic tp) {
+        ((TextView)vi.findViewById(R.id.txt_nodename)).setText(tp.getNode().getName());
+        ((TextView)vi.findViewById(R.id.txt_topic_user)).setText(underLine(tp.getMember().getUsername()));
+        //((TextView)vi.findViewById(R.id.txt_last_reply_user)).setText(underLine(tp.getLast_reply_user_login()));
+        //((TextView)vi.findViewById(R.id.txt_reply_time)).setText(timesAgo(tp.getReplied_at()));
     }
     public static void setUserLogo(NetworkImageView imageView,String url) {
         ImageLoader imageLoader = TopApp.getInstance().getImageLoader();

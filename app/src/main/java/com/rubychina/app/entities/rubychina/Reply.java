@@ -1,4 +1,4 @@
-package com.rubychina.app.entities;
+package com.rubychina.app.entities.rubychina;
 
 import android.os.Parcel;
 import android.os.Parcelable;

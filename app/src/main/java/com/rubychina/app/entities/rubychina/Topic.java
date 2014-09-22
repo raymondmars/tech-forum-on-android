@@ -1,16 +1,19 @@
-package com.rubychina.app.entities;
+package com.rubychina.app.entities.rubychina;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.rubychina.app.entities.INode;
+import com.rubychina.app.entities.ITopic;
+import com.rubychina.app.entities.IUser;
+
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
  * Created by robot on 5/12/14.
  */
-public class Topic implements Parcelable {
+public class Topic implements ITopic {
 
     private int id;
     private String title;
@@ -127,6 +130,38 @@ public class Topic implements Parcelable {
     }
 
     @Override
+    public int getReplyCount() {
+        return replies_count;
+    }
+
+    @Override
+    public INode getBelongNode() {
+        Node node = new Node();
+        node.setId(node_id);
+        node.setName(node_name);
+        return node;
+    }
+
+    @Override
+    public IUser getCreateUser() {
+
+        return user;
+    }
+
+    @Override
+    public IUser getLastReplyUser() {
+        User reply_user = new User();
+        reply_user.setId(last_reply_user_id);
+        reply_user.setLogin(last_reply_user_login);
+        return reply_user;
+    }
+
+    @Override
+    public String getLastReplyTime() {
+        return replied_at;
+    }
+
+    @Override
     public int describeContents() {
         return 0;
     }
@@ -147,6 +182,7 @@ public class Topic implements Parcelable {
 
 
     }
+
     public static final Parcelable.Creator CREATOR =
         new Parcelable.Creator() {
 

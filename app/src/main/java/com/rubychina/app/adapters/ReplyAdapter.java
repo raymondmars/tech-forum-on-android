@@ -3,15 +3,13 @@ package com.rubychina.app.adapters;
 import android.app.Activity;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.rubychina.app.activities.R;
-import com.rubychina.app.adapters.CommonListAdapter;
-import com.rubychina.app.entities.Reply;
+import com.rubychina.app.entities.rubychina.Reply;
 import com.rubychina.app.util.HtmlImageDrawer;
 import com.rubychina.app.util.UIHelper;
 
