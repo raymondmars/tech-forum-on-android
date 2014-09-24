@@ -24,8 +24,11 @@ public class TopApp extends Application {
 
     @Override
     public void onCreate() {
+        if(mInstance == null) {
+            mInstance = this;
+        }
         super.onCreate();
-        mInstance = this;
+
     }
 
     public static synchronized TopApp getInstance() {

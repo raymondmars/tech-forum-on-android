@@ -10,6 +10,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.content.Intent;
@@ -208,7 +209,9 @@ public class MainActivity extends BaseActivity implements BaseService.LoaderList
         drawerLayout.closeDrawer(drawerList);
 
         current_node_id = nd.getId();
-        progress = new ProgressDialog(view.getContext());
+
+        //View parent = adapterView.getRootView();
+        progress = new ProgressDialog(drawerLayout.getContext());
         progress.setTitle("Reading");
         progress.setMessage("Wait while reading...");
         progress.show();

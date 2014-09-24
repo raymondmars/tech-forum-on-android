@@ -58,6 +58,7 @@ public class V2exService extends BaseService {
     @Override
     public void getLatestTopics(LoaderListCallback<Topic> callback) {
         this.getTopics("http://www.v2ex.com/api/topics/latest.json",callback);
+        //this.getTopics("http://www.v2ex.com/api/topics/hot.json",callback);
     }
 
     @Override
