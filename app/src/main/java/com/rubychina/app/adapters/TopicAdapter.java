@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.rubychina.app.activities.R;
-import com.rubychina.app.entities.ITopic;
+import com.rubychina.app.entities.Topic;
 import com.rubychina.app.util.UIHelper;
 
 import java.util.ArrayList;
@@ -15,9 +15,9 @@ import java.util.ArrayList;
 /**
  * Created by robot on 5/12/14.
  */
-public class TopicAdapter extends CommonListAdapter<ITopic> {
+public class TopicAdapter extends CommonListAdapter<Topic> {
 
-    public TopicAdapter(Activity a,ArrayList<ITopic> d)  {
+    public TopicAdapter(Activity a,ArrayList<Topic> d)  {
         super(a,d);
     }
 
@@ -32,7 +32,7 @@ public class TopicAdapter extends CommonListAdapter<ITopic> {
         if(convertView == null) {
             vi = inflater.inflate(R.layout.list_row, null);
         }
-        ITopic tp = (ITopic)getItem(position);
+        Topic tp = (Topic)getItem(position);
 
         NetworkImageView imageView = (NetworkImageView)vi.findViewById(R.id.list_image);
         UIHelper.setUserLogo(imageView, tp.getCreateUser().getAvatarImage());

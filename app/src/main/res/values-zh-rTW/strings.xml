@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">技术论坛聚合</string>
+    <string name="action_settings">设置</string>
+    <string name="drawer_open">打开滑动菜单</string>
+    <string name="drawer_close">关闭滑动菜单</string>
     <string name="pull_to_refresh_pull_label">下拉刷新</string>
     <string name="pull_to_refresh_release_label">放開以刷新</string>
     <string name="pull_to_refresh_refreshing_label">載入中</string>

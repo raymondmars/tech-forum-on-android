@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.rubychina.app.activities.R;
-import com.rubychina.app.entities.ITopic;
+import com.rubychina.app.entities.Topic;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -48,22 +48,31 @@ public class UIHelper {
             return "";
         }
 
-
-
     }
 
-    public static void renderTopicInfo(View vi,ITopic tp) {
+    public static void renderTopicInfo(View vi,Topic tp) {
         ((TextView)vi.findViewById(R.id.txt_nodename)).setText(tp.getBelongNode().getName());
         ((TextView)vi.findViewById(R.id.txt_topic_user)).setText(underLine(tp.getCreateUser().getUsername()));
-        ((TextView)vi.findViewById(R.id.txt_last_reply_user)).setText(underLine(tp.getLastReplyUser().getUsername()));
-        ((TextView)vi.findViewById(R.id.txt_reply_time)).setText(timesAgo(tp.getLastReplyTime()));
+        if(tp.getLastReplyUser() != null) {
+            ((TextView) vi.findViewById(R.id.textView_point2)).setVisibility(View.VISIBLE);
+            ((TextView) vi.findViewById(R.id.textView_t1)).setVisibility(View.VISIBLE);
+            ((TextView) vi.findViewById(R.id.txt_last_reply_user)).setVisibility(View.VISIBLE);
+            ((TextView) vi.findViewById(R.id.txt_last_reply_user)).setText(underLine(tp.getLastReplyUser().getUsername()));
+        } else {
+            ((TextView) vi.findViewById(R.id.textView_point2)).setVisibility(View.INVISIBLE);
+            ((TextView) vi.findViewById(R.id.textView_t1)).setVisibility(View.INVISIBLE);
+            ((TextView) vi.findViewById(R.id.txt_last_reply_user)).setVisibility(View.INVISIBLE);
+
+        }
+        if(tp.getLastReplyTime() != null && tp.getLastReplyTime() != "") {
+            ((TextView) vi.findViewById(R.id.txt_reply_time)).setVisibility(View.VISIBLE);
+            ((TextView) vi.findViewById(R.id.txt_reply_time)).setText(timesAgo(tp.getLastReplyTime()));
+        } else {
+            ((TextView) vi.findViewById(R.id.txt_reply_time)).setVisibility(View.INVISIBLE);
+        }
+
     }
-    public static void renderV2exTopicInfo(View vi, com.rubychina.app.entities.v2ex.Topic tp) {
-        ((TextView)vi.findViewById(R.id.txt_nodename)).setText(tp.getNode().getName());
-        ((TextView)vi.findViewById(R.id.txt_topic_user)).setText(underLine(tp.getMember().getUsername()));
-        //((TextView)vi.findViewById(R.id.txt_last_reply_user)).setText(underLine(tp.getLast_reply_user_login()));
-        //((TextView)vi.findViewById(R.id.txt_reply_time)).setText(timesAgo(tp.getReplied_at()));
-    }
+
     public static void setUserLogo(NetworkImageView imageView,String url) {
         ImageLoader imageLoader = TopApp.getInstance().getImageLoader();
         imageView.setDefaultImageResId(R.drawable.ic_user_default);

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.rubychina.app.activities.R;
-import com.rubychina.app.entities.rubychina.Reply;
+import com.rubychina.app.entities.Reply;
 import com.rubychina.app.util.HtmlImageDrawer;
 import com.rubychina.app.util.UIHelper;
 
@@ -40,18 +40,18 @@ public class ReplyAdapter extends CommonListAdapter<Reply> {
             Reply reply = (Reply) getItem(position);
 
             NetworkImageView imageView = (NetworkImageView) vi.findViewById(R.id.reply_user_image);
-            UIHelper.setUserLogo(imageView, reply.getUser().getAvatar_url());
+            UIHelper.setUserLogo(imageView, reply.getReplyUser().getAvatarImage());
 
-            ((TextView) vi.findViewById(R.id.txt_reply_user)).setText(reply.getUser().getLogin());
+            ((TextView) vi.findViewById(R.id.txt_reply_user)).setText(reply.getReplyUser().getUsername());
             ((TextView) vi.findViewById(R.id.txt_reply_floor_count)).setText(String.valueOf(position + 1) + "楼");
-            ((TextView) vi.findViewById(R.id.txt_reply_list_time)).setText(UIHelper.timesAgo(reply.getCreated_at()));
+            ((TextView) vi.findViewById(R.id.txt_reply_list_time)).setText(UIHelper.timesAgo(reply.getReplyTime()));
 
             TextView reply_content = ((TextView) vi.findViewById(R.id.txt_reply_content));
             //reply_content.setMovementMethod(new ScrollingMovementMethod());
             reply_content.setMovementMethod(LinkMovementMethod.getInstance());
 
             HtmlImageDrawer drawer = new HtmlImageDrawer(reply_content, vi.getResources().getDrawable(R.drawable.ic_image_loading));
-            reply_content.setText(Html.fromHtml(reply.getBody_html(), drawer, null));
+            reply_content.setText(Html.fromHtml(reply.getContent(), drawer, null));
         }
 
         return vi;

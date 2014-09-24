@@ -7,16 +7,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import com.rubychina.app.adapters.loader.LoaderCallback;
-import com.rubychina.app.adapters.loader.RubyChinaLoader;
-import com.rubychina.app.adapters.loader.V2exLoader;
-import com.rubychina.app.entities.ITopic;
+import com.rubychina.app.entities.*;
 import com.rubychina.app.services.BaseService;
+import com.rubychina.app.services.RubyChinaService;
+import com.rubychina.app.services.V2exService;
+
 import java.util.ArrayList;
 
 
 
-public class NavActivity extends Activity implements LoaderCallback<ITopic>{
+public class NavActivity extends Activity implements BaseService.LoaderListCallback<Topic> {
 
     protected  ProgressDialog progress;
     protected Intent _main_activity;
@@ -57,7 +57,7 @@ public class NavActivity extends Activity implements LoaderCallback<ITopic>{
         progress.setTitle("Reading");
         progress.setMessage("Wait while reading...");
         progress.show();
-        new RubyChinaLoader(this).loadData();
+        RubyChinaService.instance.getLatestTopics(this);
     }
 
     public void onClick_V2ex(View view) {
@@ -65,11 +65,11 @@ public class NavActivity extends Activity implements LoaderCallback<ITopic>{
         progress.setTitle("Reading");
         progress.setMessage("Wait while reading...");
         progress.show();
-        new V2exLoader(this).loadData();
+        V2exService.instance.getLatestTopics(this);
     }
 
     @Override
-    public void onDataLoaded(ArrayList<ITopic> list, BaseService service) {
+    public void onListDataLoaded(ArrayList<Topic> list, BaseService service) {
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(BaseService.Topic_List_Key, list);
         bundle.putSerializable(BaseService.Service_key,service);

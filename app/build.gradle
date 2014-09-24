@@ -31,7 +31,7 @@ android {
             applicationVariants.all { variant ->
                 def file = variant.outputFile
                 //variant.outputFile = new File(file.parent, file.name.replace(".apk", "-" + defaultConfig.versionName + ".apk"))
-                variant.outputFile = new File(file.parent, "ruby_china_release_" + defaultConfig.versionName + ".apk")
+                variant.outputFile = new File(file.parent, "tech_forums_release_" + defaultConfig.versionName + ".apk")
             }
         }
     }
@@ -40,9 +40,9 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.android.support:appcompat-v7:20.0.0'
     compile 'com.mcxiaoke.volley:library:1.0.+'
     compile 'com.google.code.gson:gson:2.2.4'
-    compile 'com.android.support:support-v4:19.+'
+    compile 'com.android.support:support-v4:20.0.0'
 }
 //./gradlew clean && ./gradlew build

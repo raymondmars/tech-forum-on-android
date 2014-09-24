@@ -24,12 +24,13 @@
         </activity>
         <activity
             android:name="com.rubychina.app.activities.TopicDetailsActivity"
-            android:label="@string/title_activity_topic_details" >
+             >
         </activity>
         <activity
             android:name="com.rubychina.app.activities.NavActivity"
-            android:label="@string/title_activity_nav" >
+             >
         </activity>
+
     </application>
 
 </manifest>
