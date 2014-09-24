@@ -1,12 +1,19 @@
 ##Tech Forum on Android##
 
-![screenshot](/screenshot_1.png)
+![screenshot](/Snip20140924_1.png)
+###[Ruby China](https://ruby-china.org/)###            
 
-<p/>
-###[Ruby China](https://ruby-china.org/)###
-![screenshot](/screenshot_2.png)
-
-<p/>
 ###[V2EX](http://v2ex.com/)###
-![screenshot](/screenshot_3.png)
+
+<p/>
+![screenshot](/Snip20140924_2.png)    
+<p/>
+![screenshot](/Snip20140924_3.png)
+<p/>
+![screenshot](/Snip20140924_4.png)    
+<p/>
+![screenshot](/Snip20140924_5.png)
+<p/>
+![screenshot](/Snip20140924_6.png)    
+
 
