@@ -19,7 +19,7 @@ android {
             storeFile file("ruby_android_key.jks")
             storePassword "Start@123"
             keyAlias "ruby_android"
-            keyPassword "Start@123"
+            keyPassword "111111"
 
         }
     }
